@@ -1,0 +1,36 @@
+/**index.wxss**/
+.input {
+  border: 1rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.input image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.todos{
+  margin-top: 20rpx;
+  border: 1px solid #ccc;
+}
+.todos .item{
+  border-bottom: 1px solid #ccc;
+  padding: 20rpx;
+  display: flex;
+}
+.todos .item:last-child{
+  border-bottom: 0;
+}
+.todos .item text {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.todos .item.completed text{
+  text-decoration: line-through;
+  color: #ddd
+}
+.remind {
+  margin-top: 20rpx;
+  color: #ccc;
+}

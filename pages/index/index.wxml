@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+ <view class="input">
+  <image src="../../assets/add.png" bindtap="addToHandle"></image>
+  <input placeholder="Anything write here" value="{{msg}}" bindinput="inputChangehandle" bindconfirm="addToHandle"></input>
+ </view>
+ <view wx:if="{{todos.length === 0}}" class="remind">
+  <text>Please add a target!</text>
+ </view>
+ <view class="todos" wx:else >
+  <view class="item {{item.completed?'completed':''}}" wx:for="{{todos}}" bindtap="toggleTodoHandle" data-index="{{ index }}" wx:key="index">
+    <icon type="{{item.completed?'success':'circle'}}"></icon>
+    <text>{{item.name}}</text>
+    <icon type="clear" catchtap="removeTodoHandle" data-index="{{ index }}"></icon>
+  </view>
+ </view>
+ <view class="footer"></view>
+</view>
